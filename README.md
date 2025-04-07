@@ -67,7 +67,7 @@ Bu projeyi ücretsiz olarak kullanıma sunmamıza destek olan tüm kullanıcıla
 
 ## 📝 Sürüm Geçmişi
 
-### Sürüm 1.0.0 (2025-04-XX)
+### Sürüm 1.0.0
 - İlk sürüm yayınlandı
 - Temel chatbot özellikleri eklendi
 - Yönetim paneli eklendi
