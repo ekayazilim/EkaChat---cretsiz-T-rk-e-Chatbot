@@ -55,11 +55,17 @@ Bu proje MIT lisansı altında dağıtılmaktadır. Detaylar için [LICENSE](LIC
 4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
 5. Pull Request oluşturun
 
-## 📞 Destek
+## 📞 İletişim ve Destek
 
-- 📧 E-posta: info@ekayazilim.com.tr
-- 📞 Telefon: 0850 307 3458
-- 💬 WhatsApp: 0850 307 3458
+### Bize Ulaşın
+- 🌐 Web: [ekayazilim.com.tr](https://ekayazilim.com.tr)
+- 📧 E-posta: [info@ekayazilim.com.tr](mailto:info@ekayazilim.com.tr)
+- 📞 Telefon: [0850 307 34 58](tel:08503073458)
+- 💬 WhatsApp: [0850 307 34 58](https://wa.me/908503073458)
+
+### Ürün ve Hizmetlerimiz
+- 🌐 [EkaYazılım](https://ekayazilim.com.tr) - Kurumsal Yazılım Çözümleri
+- 🖥️ [EkaSunucu](https://ekasunucu.com) - Web Hosting ve Sunucu Hizmetleri
 
 ## 🙏 Teşekkür
 
@@ -71,4 +77,4 @@ Bu projeyi ücretsiz olarak kullanıma sunmamıza destek olan tüm kullanıcıla
 - İlk sürüm yayınlandı
 - Temel chatbot özellikleri eklendi
 - Yönetim paneli eklendi
-- Mobil uyumluluk sağlandı 
+- Mobil uyumluluk sağlandı
