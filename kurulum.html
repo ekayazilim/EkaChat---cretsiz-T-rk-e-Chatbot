@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Kurulum Talimatları</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2196F3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+        }
+        code {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            display: block;
+            margin: 10px 0;
+            white-space: pre;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .note {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Chatbot Kurulum Talimatları</h1>
+    
+    <div class="step">
+        <h2>1. Sistem Gereksinimleri</h2>
+        <ul>
+            <li>PHP 7.4 veya üzeri</li>
+            <li>MySQL 5.7 veya üzeri</li>
+            <li>Apache/Nginx web sunucusu</li>
+            <li>mod_rewrite modülü aktif olmalı</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>2. Dosyaların Yüklenmesi</h2>
+        <ul>
+            <li>Tüm dosyaları FTP veya File Manager ile sunucunuza yükleyin</li>
+            <li>Dosyaların izinlerini (chmod) ayarlayın:
+                <code>config.php: 644
+yonetim/: 755
+assets/: 755</code>
+            </li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>3. Veritabanı Kurulumu</h2>
+        
+        <h3>cPanel üzerinden:</h3>
+        <ol>
+            <li>cPanel'de "MySQL Veritabanları"na tıklayın</li>
+            <li>"Yeni Veritabanı Oluştur" bölümünden veritabanı adını girin</li>
+            <li>"MySQL Kullanıcıları" bölümünden yeni kullanıcı oluşturun</li>
+            <li>"Kullanıcıları Ekle" bölümünden kullanıcıya tüm izinleri verin</li>
+        </ol>
+
+        <h3>Plesk üzerinden:</h3>
+        <ol>
+            <li>Plesk panelinde "Veritabanları"na tıklayın</li>
+            <li>"Veritabanı Ekle" butonuna tıklayın</li>
+            <li>Veritabanı adı ve kullanıcı bilgilerini girin</li>
+        </ol>
+
+        <h3>Veritabanı İçeriğinin Aktarılması:</h3>
+        <ol>
+            <li>phpMyAdmin'e giriş yapın</li>
+            <li>Oluşturduğunuz veritabanını seçin</li>
+            <li>"İçe Aktar" sekmesine tıklayın</li>
+            <li>"chatbot.sql" dosyasını seçin ve içe aktarın</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>4. Yapılandırma</h2>
+        <p>config.php dosyasını düzenleyin:</p>
+        <code>// Veritabanı bağlantı bilgileri
+$db_host = "localhost"; // Genelde localhost
+$db_user = "veritabani_kullanicisi";
+$db_pass = "veritabani_sifresi";
+$db_name = "veritabani_adi";</code>
+    </div>
+
+    <div class="step">
+        <h2>5. Yönetici Paneli</h2>
+        <p>Varsayılan giriş bilgileri:</p>
+        <code>Kullanıcı adı: admin
+Şifre: admin123</code>
+        
+        <div class="warning">
+            <strong>Önemli:</strong> İlk girişten sonra mutlaka şifrenizi değiştirin!
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>6. Yönetici Hesabı Oluşturma (Admin Silinirse)</h2>
+        <p>Eğer admin hesabı silinirse veya giriş yapılamıyorsa:</p>
+        <ol>
+            <li>yonetim/add_admin.php dosyasını çalıştırın</li>
+            <li>Yeni admin hesabı oluşturun</li>
+            <li>İşlem bittikten sonra güvenlik için add_admin.php dosyasını silin</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>7. Chatbot'u Sitenize Ekleme</h2>
+        <p>1. Önce chatbot.js dosyasını düzenleyin ve CHATBOT_URL değişkenini kendi sunucu adresinize göre güncelleyin:</p>
+        <code>// chatbot.js dosyasında bu satırı bulun ve değiştirin:
+const CHATBOT_URL = 'http://siteniz.com/chatbot';</code>
+        
+        <p>2. Sitenizin footer kısmına şu kodu ekleyin:</p>
+        <code>&lt;script src="http://siteniz.com/chatbot/chatbot.js"&gt;&lt;/script&gt;</code>
+
+        <div class="warning">
+            <strong>Önemli:</strong> URL'leri kendi domain adresinize göre değiştirmeyi unutmayın. Örneğin:
+            <ul>
+                <li>CHATBOT_URL = 'http://example.com/chatbot'</li>
+                <li>&lt;script src="http://example.com/chatbot/chatbot.js"&gt;&lt;/script&gt;</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="note">
+        <h3>Destek ve İletişim</h3>
+        <p>Kurulum sırasında herhangi bir sorunla karşılaşırsanız:</p>
+        <ul>
+            <li>📧 E-posta: info@ekayazilim.com.tr</li>
+            <li>📞 Telefon: 0850 307 3458</li>
+            <li>💬 WhatsApp: 0850 307 3458</li>
+        </ul>
+    </div>
+</body>
+</html> 
