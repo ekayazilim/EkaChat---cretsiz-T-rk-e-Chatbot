@@ -78,3 +78,10 @@ Bu projeyi ücretsiz olarak kullanıma sunmamıza destek olan tüm kullanıcıla
 - Temel chatbot özellikleri eklendi
 - Yönetim paneli eklendi
 - Mobil uyumluluk sağlandı
+
+## Hizmetlerimiz
+
+- **Hosting İhtiyacınız Varsa:** [Paylaşımlı Hosting Paketleri](https://www.ekasunucu.com/tr/kategori/hosting/paylasimli-hosting)
+- **VPS İhtiyacınız Varsa:** [Türkiye Lokasyon VDS/VPS Çözümleri](https://www.ekasunucu.com/kategori/turkiye-lokasyon-vds-vps)
+- **Domain İhtiyacınız Varsa:** [Domain Kayıt & Transfer Hizmetleri](https://www.ekasunucu.com/domain)
+
