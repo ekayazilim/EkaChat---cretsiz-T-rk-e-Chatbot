@@ -67,10 +67,6 @@ Bu proje MIT lisansı altında dağıtılmaktadır. Detaylar için [LICENSE](LIC
 - 🌐 [EkaYazılım](https://ekayazilim.com.tr) - Kurumsal Yazılım Çözümleri
 - 🖥️ [EkaSunucu](https://ekasunucu.com) - Web Hosting ve Sunucu Hizmetleri
 
-## 🙏 Teşekkür
-
-Bu projeyi ücretsiz olarak kullanıma sunmamıza destek olan tüm kullanıcılarımıza teşekkür ederiz.
-
 ## 📝 Sürüm Geçmişi
 
 ### Sürüm 1.0.0
